@@ -2,14 +2,13 @@
  *  UCF COP3330 Fall 2021 Assignment 1 Solution
  *  Copyright 2021 Tyler Goldsmith
  */
-import java.io.IOException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String In="";
-        int min_age=16,Sex=1,oz=0,W=0,H=0;
-        double R=0;
+        String In;
+        int Sex,oz,W,H;
+        double R;
         //Try catch statement check for exceptions (when input cannot be stored as int
         while(true){
             try{
@@ -60,7 +59,7 @@ public class Main {
         }
         if(Sex==1)
             R=0.73;
-        else if(Sex==2)
+        else
             R=0.66;
         double BAC=(oz*5.14/W*R)-0.015*H;
         String drive= BAC>=0.08?
